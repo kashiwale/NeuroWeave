@@ -14,10 +14,10 @@ poetry.lock
 .idea/
 
 # Environment Variables
-.env
+advrag/.env
 
 # Chroma vector DB cache
-.chroma/
+advrag/.chroma/
 
 # Graph Images (optional)
 *.png

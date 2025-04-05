@@ -2,11 +2,11 @@ from dotenv import load_dotenv
 from pprint import pprint
 load_dotenv()
 
-from graph.chains.retrieval_grader import GradeDocuments, retrieval_grader
-from graph.chains.generation import generation_chain
-from graph.chains.hallucination_grader import hallucination_grader, GradeHallucinations
-from ingestion import retriever
-from graph.chains.router import question_router, RouteQuery
+from advrag.graph.chains.retrieval_grader import GradeDocuments, retrieval_grader
+from advrag.graph.chains.generation import generation_chain
+from advrag.graph.chains.hallucination_grader import hallucination_grader, GradeHallucinations
+from advrag.ingestion import retriever
+from advrag.graph.chains.router import question_router, RouteQuery
 
 def test_retrival_grader_answer_yes() -> None:
     question = "agent memory"

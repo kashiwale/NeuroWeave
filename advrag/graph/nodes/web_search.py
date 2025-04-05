@@ -3,7 +3,7 @@ from typing import Any, Dict
 from langchain.schema import Document
 from langchain_community.tools.tavily_search import TavilySearchResults
 
-from graph.state import GraphState
+from advrag.graph.state import GraphState
 from dotenv import load_dotenv
 load_dotenv()
 

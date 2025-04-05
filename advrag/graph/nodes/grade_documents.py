@@ -1,7 +1,7 @@
 from typing import Any, Dict
 
-from graph.chains.retrieval_grader import retrieval_grader
-from graph.state import GraphState
+from advrag.graph.chains.retrieval_grader import retrieval_grader
+from advrag.graph.state import GraphState
 
 def grade_documents(state: GraphState) -> Dict[str, Any]:
     """

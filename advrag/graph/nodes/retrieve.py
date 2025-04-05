@@ -1,7 +1,7 @@
 from typing import Any, Dict
 
-from graph.state import GraphState
-from ingestion import retriever
+from advrag.graph.state import GraphState
+from advrag.ingestion import retriever
 
 def retrieve(state: GraphState) -> Dict[str, Any]:
     print("---Retrieve---")
