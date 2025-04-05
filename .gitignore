@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+
+# Virtual Environment (Poetry)
+poetry/
+poetry.lock
+
+# VSCode or PyCharm config
+.vscode/
+.idea/
+
+# Environment Variables
+.env
+
+# Chroma vector DB cache
+.chroma/
+
+# Graph Images (optional)
+*.png
+
+# SQLite DBs (used by Chroma)
+*.sqlite3
+
+# Test Output
+*.log
+*.coverage
+*.pytest_cache/
+*.mypy_cache/
+
+# OS Files
+.DS_Store
+Thumbs.db
+
+# Backup files
+*.bak
+*.tmp
+
+# Compiled wheels and dist files
+build/
+dist/
+*.egg-info/
+
+# Git and Github
+*.swp
+*.swo
+project_tree.txt
