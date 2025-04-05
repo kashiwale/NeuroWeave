@@ -2,16 +2,14 @@ from typing import List, TypedDict
 
 class GraphState(TypedDict):
     """
-
-    Represents the state of our graph.
+    Defines the shared state structure for LangGraph.
 
     Attributes:
-         question: question
-         generation: LLM generation
-         web_search: whether to add search
-         documents: list of documents
+        question (str): User input question.
+        generation (str): LLM response or generation.
+        web_search (bool): Whether a web search was triggered.
+        documents (List[str]): Retrieved or searched documents for grounding.
     """
-
     question: str
     generation: str
     web_search: bool

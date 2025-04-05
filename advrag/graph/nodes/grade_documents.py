@@ -1,3 +1,9 @@
+# grade_documents.py - Handles the document grading logic within the workflow.
+# This module likely evaluates retrieved documents against the original query
+# or expected answers using some form of comparison logic, possibly leveraging
+# LLMs or traditional scoring metrics.
+
+
 from typing import Any, Dict
 
 from advrag.graph.chains.retrieval_grader import retrieval_grader

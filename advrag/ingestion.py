@@ -1,4 +1,5 @@
 from dotenv import load_dotenv
+# Load environment variables from a .env file (e.g., for OpenAI keys)
 load_dotenv()
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_chroma import Chroma
@@ -7,15 +8,24 @@ from langchain_openai import OpenAIEmbeddings
 
 #load_dotenv()
 
-
+# List of blog URLs to fetch documents from
 urls = [
     "https://lilianweng.github.io/posts/2023-06-23-agent/",
     "https://lilianweng.github.io/posts/2023-03-15-prompt-engineering/",
     "https://lilianweng.github.io/posts/2023-10-25-adv-attack-llm/",
 ]
 
+# Use WebBaseLoader to load the web content from each URL
+# Returns a list of documents for each URL
 docs = [WebBaseLoader(url).load() for url in urls]
+
+# Flatten the nested lists of documents into a single list
+
 docs_list = [item for sublist in docs for item in sublist]
+
+# Split the documents into smaller chunks using token-aware splitter
+# This helps improve retrieval granularity and context overlap control
+
 
 text_splitter = RecursiveCharacterTextSplitter.from_tiktoken_encoder(
     chunk_size=250, chunk_overlap=0
@@ -29,6 +39,8 @@ doc_splits = text_splitter.split_documents(docs_list)
 #     persist_directory="./.chroma",
 # )
 
+# Set up a persistent vector store (Chroma) for retrieval
+# This uses pre-computed embeddings to support similarity search
 retriever = Chroma(
     collection_name="rag-chroma",
     #persist_directory="./.chroma",
